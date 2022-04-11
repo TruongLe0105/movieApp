@@ -20,17 +20,16 @@ const TrendHome = () => {
 
 
     const items = trending?.map((trend) => (
-        <div key={trend.id} style={{ width: '300px' }}>
+        <div key={trend.id} style={{ width: '300px', marginLeft: '10px' }}>
             <img onClick={() => navigate(`/${trend.media_type}/${trend.id}`)} src={trend.poster_path ? `${IMAGE}/${trend.poster_path}` : noPicture}
                 alt={trend?.name}
                 onDragStart={handleDragStart}
                 style={{
-                    padding: '10px',
                     height: '300px',
                     width: '250px',
                 }}
             />
-            <p style={{ color: 'white', fontWeight: '600', textAlign: 'center' }}>{trend?.name || trend?.title}</p>
+            <p style={{ color: 'white', fontWeight: '600', textAlign: 'left' }}>{trend?.name || trend?.title}</p>
         </div>
     ))
 

@@ -32,7 +32,8 @@ export default function CardMovie({
                     backgroundColor: '#4f5b62',
                     borderRadius: 2,
                     ml: 2,
-                    width: '340px',
+                    // width: '300px',
+                    maxHeight: '500px',
                     border: '1px solid white',
                 }}>
                 <CardActionArea>
@@ -45,7 +46,7 @@ export default function CardMovie({
                     />
                     <CardContent>
                         <Typography
-                            fontSize='20px'
+                            sx={{ fontSize: '0.9rem' }}
                             color='#66ffa6'
                             textAlign='center'
                         >
@@ -54,11 +55,12 @@ export default function CardMovie({
                         <Typography
                             sx={{
                                 display: 'flex',
-                                justifyContent: 'space-around'
+                                justifyContent: 'space-around',
+
                             }}
                         >
-                            <Typography color="white">{media_type === 'tv' ? 'Tv Series' : 'Movies'}</Typography>
-                            <Typography color="white">{date}</Typography>
+                            <Typography sx={{ fontSize: '0.7rem' }} color="white">{media_type === 'tv' ? 'Tv Series' : 'Movies'}</Typography>
+                            <Typography sx={{ fontSize: '0.7rem' }} color="white">{date}</Typography>
                         </Typography>
                     </CardContent>
                 </CardActionArea>

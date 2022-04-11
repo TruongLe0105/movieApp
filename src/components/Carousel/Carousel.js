@@ -18,7 +18,7 @@ const Carousel = ({ id, media_type }) => {
 
     const items = credits?.map((credit) => (
         <>
-            <img src={credit.profile_path ? `${IMAGE}/${credit.profile_path}` : noPicture}
+            <img key={credit.id} src={credit.profile_path ? `${IMAGE}/${credit.profile_path}` : noPicture}
                 alt={credit?.name}
                 onDragStart={handleDragStart}
                 className='carouselImg'
@@ -45,7 +45,7 @@ const Carousel = ({ id, media_type }) => {
 
     return (
         <AliceCarousel
-            animationType='slide'
+            // animationType='slide'
             autoWidth
             autoPlay
             reponsive={reponsive}

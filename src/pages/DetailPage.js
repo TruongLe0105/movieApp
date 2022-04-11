@@ -20,7 +20,7 @@ function DetailPage() {
     const fetchVideo = async () => {
         const { data } = await apiService.get(`/${params.type}/${params.id}/videos?api_key=${API_KEY}&language=en-US`)
 
-        console.log(data.results);
+        // console.log(data.results);   
         setVideo(data.results[0]?.key)
     }
 
@@ -39,6 +39,7 @@ function DetailPage() {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
+                height: '97vh'
             }}
         >
             <div
@@ -47,6 +48,7 @@ function DetailPage() {
                     backgroundColor: '#3d4042',
                     marginTop: '70px',
                     width: '95%',
+                    height: '90%',
                     borderRadius: '15px',
                     border: '2px solid white',
                 }}
@@ -57,10 +59,7 @@ function DetailPage() {
                         height: '83vh',
                     }}>
                     <Badge
-                        sx={{
-                            height: '100%',
-
-                        }}
+                        sx={{ height: '100%' }}
                         badgeContent={content.vote_average ? content.vote_average : '0'}
                         color={content.vote_average > 6.5 ? 'primary' : 'secondary'} >
                         <img
@@ -78,10 +77,10 @@ function DetailPage() {
                         marginLeft: '10px',
                     }}
                 >
-                    <div style={{ color: 'white', fontSize: '50px', fontStyle: 'italic' }}>{content.title || content.name}</div>
-                    <span style={{ color: 'yellow', fontSize: '30px', marginLeft: '150px', marginTop: 0, }}>{date}</span>
+                    <div style={{ color: 'white', fontSize: '45px', fontStyle: 'italic' }}>{content.title || content.name}</div>
+                    <span style={{ color: 'yellow', fontSize: '25px', marginLeft: '150px', marginTop: 0, }}>{date}</span>
                     <p style={{
-                        color: '#fff', fontSize: '25px', borderRadius: '10px', border: '1px solid black', padding: '10px', textAlign: 'center',
+                        color: '#fff', fontSize: '15px', borderRadius: '10px', border: '1px solid black', padding: '10px', textAlign: 'center',
                         boxShadow: '1px -1px 15px 5px #000000'
                     }}>{content.overview ? content.overview : 'Not Found Content'}</p>
                     <div style={{ width: '100%', height: '50%', marginTop: '10px' }}>
