@@ -31,11 +31,7 @@ function DetailPage() {
     useEffect(() => {
         fetchIds()
         fetchVideo()
-    })
-    // useEffect(() => {
-    //     fetchIds()
-    //     fetchVideo()
-    // }, [])
+    }, [])
 
     return (
         <div

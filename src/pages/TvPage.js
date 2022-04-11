@@ -24,12 +24,9 @@ function MoviesPage() {
         setcountOfPage(data.total_pages)
     }
 
-    // useEffect(() => {
-    //     fetchMovies()
-    // }, [page, genreForURL])
     useEffect(() => {
         fetchMovies()
-    })
+    }, [page, genreForURL])
 
     return (
         <div style={{ position: 'absolute', left: 0 }}>
