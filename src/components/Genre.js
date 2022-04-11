@@ -12,8 +12,8 @@ function Genre({
     type
 }) {
     const handleAdd = (e) => {
+        setGenre(genre.filter((add) => add.id !== e.id))
         setSelectedGenre([...selectedGenre, e])
-        setGenre(genre.filter((g) => g.id !== e.id))
         setPage(1)
     }
 
@@ -32,6 +32,12 @@ function Genre({
     useEffect(() => {
         fetchGenres()
     }, [])
+
+
+
+    // useEffect(() => {
+    //     fetchGenres()
+    // }, [])
 
     return (
         <div style={{ padding: '6px 0' }}>
