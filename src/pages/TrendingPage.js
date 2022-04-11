@@ -18,10 +18,8 @@ function TrendingPage() {
 
     useEffect(() => {
         fetchTrending()
-    })
-    // useEffect(() => {
-    //     fetchTrending()
-    // }, [page])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [page])
 
     return (
         <div style={{ position: 'absolute', left: 0 }}>

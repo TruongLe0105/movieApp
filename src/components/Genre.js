@@ -27,17 +27,13 @@ function Genre({
         const { data } = await apiService.get(`genre/${type}/list?api_key=${API_KEY}&language=en-US`)
 
         setGenre(data.genres)
+
     }
 
     useEffect(() => {
         fetchGenres()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
-
-
-
-    // useEffect(() => {
-    //     fetchGenres()
-    // }, [])
 
     return (
         <div style={{ padding: '6px 0' }}>

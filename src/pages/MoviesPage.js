@@ -24,10 +24,8 @@ function MoviesPage() {
 
     useEffect(() => {
         fetchMovies()
-    })
-    // useEffect(() => {
-    //     fetchMovies()
-    // }, [page, genreForURL])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [page, genreForURL])
 
     return (
         <div style={{ position: 'absolute', left: 0, right: 0 }}>

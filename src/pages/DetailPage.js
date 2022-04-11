@@ -28,14 +28,11 @@ function DetailPage() {
     const image = `${IMAGE}/${content.poster_path}`
     const date = content.release_date || content.first_air_date
 
-    // useEffect(() => {
-    //     fetchIds()
-    //     fetchVideo()
-    // }, [])
     useEffect(() => {
         fetchIds()
         fetchVideo()
-    })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     return (
         <div

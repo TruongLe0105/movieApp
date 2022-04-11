@@ -41,10 +41,8 @@ const Carousel = ({ id, media_type }) => {
 
     useEffect(() => {
         fetchCredit()
-    })
-    // useEffect(() => {
-    //     fetchCredit()
-    // }, [])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     return (
         <AliceCarousel

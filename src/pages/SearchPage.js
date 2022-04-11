@@ -18,15 +18,13 @@ function SearchPage() {
 
         setSearch(data.results)
         setCountOfPage(data.total_pages)
-        // setSearchText( '')
+        // setSearchText('')
     }
 
     useEffect(() => {
         fetchSearch()
-    })
-    // useEffect(() => {
-    //     fetchSearch()
-    // }, [page, type])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [page, type])
 
     return (
         <div style={{ position: 'absolute', left: 0, right: 0, height: '100%' }}>
