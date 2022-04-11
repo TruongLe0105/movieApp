@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import { Badge, CardActionArea } from '@mui/material';
 import { IMAGE, IMAGE1 } from '../app/config';
 import { useNavigate } from 'react-router';
+import { Box } from '@mui/system';
 
 export default function CardMovie({
     id,
@@ -32,7 +33,6 @@ export default function CardMovie({
                     backgroundColor: '#4f5b62',
                     borderRadius: 2,
                     ml: 2,
-                    // width: '300px',
                     maxHeight: '500px',
                     border: '1px solid white',
                 }}>
@@ -52,7 +52,7 @@ export default function CardMovie({
                         >
                             {title.length > 16 ? `${title.slice(0, 16)}...` : title}
                         </Typography>
-                        <Typography
+                        <Box
                             sx={{
                                 display: 'flex',
                                 justifyContent: 'space-around',
@@ -61,7 +61,7 @@ export default function CardMovie({
                         >
                             <Typography sx={{ fontSize: '0.7rem' }} color="white">{media_type === 'tv' ? 'Tv Series' : 'Movies'}</Typography>
                             <Typography sx={{ fontSize: '0.7rem' }} color="white">{date}</Typography>
-                        </Typography>
+                        </Box>
                     </CardContent>
                 </CardActionArea>
             </Card>
