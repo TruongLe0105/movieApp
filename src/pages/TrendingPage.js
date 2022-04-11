@@ -18,7 +18,10 @@ function TrendingPage() {
 
     useEffect(() => {
         fetchTrending()
-    }, [page])
+    })
+    // useEffect(() => {
+    //     fetchTrending()
+    // }, [page])
 
     return (
         <div style={{ position: 'absolute', left: 0 }}>

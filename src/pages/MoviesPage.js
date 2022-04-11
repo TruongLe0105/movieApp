@@ -24,7 +24,10 @@ function MoviesPage() {
 
     useEffect(() => {
         fetchMovies()
-    }, [page, genreForURL])
+    })
+    // useEffect(() => {
+    //     fetchMovies()
+    // }, [page, genreForURL])
 
     return (
         <div style={{ position: 'absolute', left: 0, right: 0 }}>

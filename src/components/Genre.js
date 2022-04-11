@@ -31,7 +31,10 @@ function Genre({
 
     useEffect(() => {
         fetchGenres()
-    }, [])
+    })
+    // useEffect(() => {
+    //     fetchGenres()
+    // }, [])
 
     return (
         <div style={{ padding: '6px 0' }}>

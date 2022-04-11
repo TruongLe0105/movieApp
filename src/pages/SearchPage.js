@@ -23,7 +23,10 @@ function SearchPage() {
 
     useEffect(() => {
         fetchSearch()
-    }, [page, type])
+    })
+    // useEffect(() => {
+    //     fetchSearch()
+    // }, [page, type])
 
     return (
         <div style={{ position: 'absolute', left: 0, right: 0, height: '100%' }}>
