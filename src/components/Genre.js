@@ -26,14 +26,11 @@ function Genre({
     const fetchGenres = async () => {
         const { data } = await apiService.get(`genre/${type}/list?api_key=${API_KEY}&language=en-US`)
 
-        // console.log('genre', data.genres);
-
         setGenre(data.genres)
     }
 
     useEffect(() => {
         fetchGenres()
-
     }, [])
 
     return (

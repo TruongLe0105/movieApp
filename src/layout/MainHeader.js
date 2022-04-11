@@ -7,7 +7,6 @@ import MovieCreationIcon from '@mui/icons-material/MovieCreation';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
 import { Outlet, useNavigate } from 'react-router';
 import SearchIcon from '@mui/icons-material/Search'
-import { Box } from '@mui/system';
 
 export default function MainHeader() {
     const navigate = useNavigate()

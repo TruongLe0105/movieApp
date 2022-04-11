@@ -1,4 +1,4 @@
-import { Badge, Button, Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material';
+import { Badge, Button } from '@mui/material';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import apiService from '../app/apiService'
@@ -21,7 +21,6 @@ function DetailPage() {
     const fetchVideo = async () => {
         const { data } = await apiService.get(`/${params.type}/${params.id}/videos?api_key=${API_KEY}&language=en-US`)
 
-        // console.log(data.results);   
         setVideo(data.results[0]?.key)
     }
 
@@ -32,7 +31,7 @@ function DetailPage() {
     useEffect(() => {
         fetchIds()
         fetchVideo()
-    }, [params])
+    }, [])
 
     return (
         <div
@@ -51,7 +50,8 @@ function DetailPage() {
                         <img
                             className='img'
                             src={content.poster_path ? image : IMAGE1}
-                        />
+                            alt={content.title || content.name}
+                        ></img>
                     </Badge>
                 </div>
                 <div

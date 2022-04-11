@@ -1,19 +1,8 @@
 import { useState, useEffect } from 'react';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
 import apiService from '../app/apiService';
 import { API_KEY, IMAGE } from '../app/config';
 import { useNavigate } from 'react-router';
 import { Grid } from '@mui/material';
-
-// function srcset(image, size, rows = 1, cols = 1) {
-
-//     return {
-//         src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-//         srcSet: `${image}?w=${size * cols}&h=${size * rows
-//             }&fit=crop&auto=format&dpr=2 2x`,
-//     };
-// }
 
 export default function ListMovies() {
     const [content, setContent] = useState([])
@@ -30,13 +19,6 @@ export default function ListMovies() {
     }, [])
 
     return (
-
-        // <ImageList
-        //     sx={{ ml: '20px', width: '98%', height: 800 }}
-        //     variant="quilted"
-        //     cols={4}
-        //     rowHeight={160}
-        // >
         <Grid container spacing={1} sx={{ ml: '0px', maxWidth: '100%' }}>
             {content.map((item) => (
 
@@ -50,7 +32,6 @@ export default function ListMovies() {
                 </Grid>
             ))}
         </Grid>
-        // </ImageList>
     );
 }
 
