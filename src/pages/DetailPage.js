@@ -6,6 +6,7 @@ import { API_KEY, IMAGE1 } from '../app/config'
 import { IMAGE } from '../app/config';
 import Carousel from '../components/Carousel/Carousel';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import './DetailPage.css'
 
 function DetailPage() {
     const [content, setContent] = useState([])
@@ -35,59 +36,35 @@ function DetailPage() {
 
     return (
         <div
-            style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '97vh'
-            }}
+            className='container'
         >
             <div
-                style={{
-                    display: 'flex',
-                    backgroundColor: '#3d4042',
-                    marginTop: '70px',
-                    width: '95%',
-                    height: '90%',
-                    borderRadius: '15px',
-                    border: '2px solid white',
-                }}
+                className='in-container'
             >
                 <div
-                    style={{
-                        margin: '10px',
-                        height: '83vh',
-                    }}>
+                    className='content-img'
+                >
                     <Badge
-                        sx={{ height: '100%' }}
+                        className='image'
                         badgeContent={content.vote_average ? content.vote_average : '0'}
                         color={content.vote_average > 6.5 ? 'primary' : 'secondary'} >
                         <img
-                            height='100%'
+                            className='img'
                             src={content.poster_path ? image : IMAGE1}
                         />
                     </Badge>
                 </div>
                 <div
-                    style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        width: '68%',
-                        marginLeft: '10px',
-                    }}
+                    className='content-next'
                 >
-                    <div style={{ color: 'white', fontSize: '45px', fontStyle: 'italic' }}>{content.title || content.name}</div>
-                    <span style={{ color: 'yellow', fontSize: '25px', marginLeft: '150px', marginTop: 0, }}>{date}</span>
-                    <p style={{
-                        color: '#fff', fontSize: '15px', borderRadius: '10px', border: '1px solid black', padding: '10px', textAlign: 'center',
-                        boxShadow: '1px -1px 15px 5px #000000'
-                    }}>{content.overview ? content.overview : 'Not Found Content'}</p>
-                    <div style={{ width: '100%', height: '50%', marginTop: '10px' }}>
+                    <div className='title'>{content.title || content.name}</div>
+                    <span className='date-style'>{date}</span>
+                    <p className='description'>{content.overview ? content.overview : 'Not Found Content'}</p>
+                    <div className='person-image' >
                         <Carousel media_type={params.type} id={params.id} />
                     </div>
                     <Button
-                        sx={{ mb: 3, fontSize: '20px' }}
+                        className='btn'
                         variant='contained'
                         startIcon={<YouTubeIcon />}
                         color='primary'

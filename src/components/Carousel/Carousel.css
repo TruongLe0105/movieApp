@@ -1,7 +1,27 @@
 
 
 .carouselImg{
-                    height: 200px;
+                    height: 180px;
                     width: 180px;
                     border-radius: 5px;
+                    padding: 3px;
 }   
+
+.name-style{
+    color: white;
+     font-weight: 200;
+}
+
+
+@media screen and (max-width: 1000px){
+    .carouselImg{
+        height: 100px;
+        width: 120px;
+    }
+
+    .name-style{
+        color: white;
+         font-weight: 200;
+         font-size: 10px;
+    }
+}

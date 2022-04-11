@@ -23,7 +23,7 @@ const Carousel = ({ id, media_type }) => {
                 onDragStart={handleDragStart}
                 className='carouselImg'
             />
-            <p style={{ color: 'white', fontWeight: '800' }}>{credit?.name}</p>
+            <p className='name-style'>{credit?.name}</p>
         </>
     ))
 

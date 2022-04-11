@@ -20,7 +20,7 @@ export default function MainHeader() {
                 sx={{
                     backgroundColor: '#263238',
                     position: 'fixed',
-                    width: '100%',
+                    width: '100vw',
                     zIndex: 900,
                     fontSize: '0px',
                     left: 0,
